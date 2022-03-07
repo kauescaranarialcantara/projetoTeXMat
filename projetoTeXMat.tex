@@ -4,7 +4,11 @@
 \usepackage[brazilian]{babel}
 \usepackage{indentfirst}
 \usepackage[top = 2cm, bottom = 2cm, right = 2.5cm, left = 2.5cm]{geometry}
-\linespread{1.5}
+\linespread{1.3}
+\usepackage{amsmath, array, amssymb} % esse pacote permite a criação de matrizes de forma mais rápida e prática
+% portanto, podemos utilizar os pacotes acima para gerar o ambiente 'pmatrix'
+% diferentemente da criação de matrizes pelo ambiente array, com o ambiente pmatrix não precisamos de left/right para completar o código
+
 
 \title{{\LARGE \textbf{Exercícios de Fixação - Curso LaTeX}}}
 \author{Autor: Kauê Scaranari Alcântara}
@@ -12,7 +16,7 @@
 
 \begin{document}
 \maketitle
-Abaixo, seguem os exercícios resolvidos:
+Seguem os exercícios resolvidos referentes à criação de expressões matemáticas:
 
 \begin{equation}
 \sqrt[3]{\left(\frac{2^{3} + 2^{5}}{10}\right)}
@@ -21,4 +25,221 @@ Abaixo, seguem os exercícios resolvidos:
 \begin{equation}
 \overline{(x \cdot y)^{4}} = \overline{x^{4}} \cdot \overline{y^{4}}
 \end{equation}
+
+Abaixo, encontra-se um extenso ambiente matemático para estudo.
+Podemos produzir um texto que apresenta expressões matemática no decorrer de sua leitura. Como exemplo, temos: $x = 2$, ou seja, $x$ está valendo 2.
+Abaixo utilizamos o ambiente equation da seguinte forma:
+\begin{equation}
+x = 2.
+\end{equation}
+
+Os operadores básicos são \textbf{soma}, \textbf{subtração}, \textbf{multiplicação} e \textbf{divisão}
+\begin{itemize}
+\item Para soma: $x = 2 + 1$
+\item Para subtração: $x = 2 - 1$
+\item Para multiplicação: $x = 3*6$ ou $x = 3.6$ ou $x = 3 \times 6$
+\item Para divisão: $x = 6/3$
+\item Para frações: $\frac{6}{2}$ ou também $\frac{4+3+2+1}{6\times8}$
+\item Para exponenciação: $a^b$, $a^{b+c}$, $a^{\frac{b}{c}}$
+\item Para radiciação: $\sqrt[a]{b}$ ---> Lê-se raíz a de b, $\sqrt[2]{4}, \sqrt{81}$
+\item Para logaritmo: $\log 4$ Lê-se logaritmo de 4, $\log_{2}4$ Lê-se logaritmo de 4 na base 2
+\item Para seno: $\sin 60º$
+\item Para cosseno: $\cos 60º$
+\item Para tangente: $\tan 60º$
+\end{itemize}
+
+Agora podemos aplicar as propriedades aprendidas anteriormente às funções:
+\begin{itemize}
+\item $f(x) = 2x + 2$
+\item $f(x) = 2\cos x$
+\item $f(x) = 2x^{2} + x + 4$
+\item $f(x) = \sqrt[3]{x} + 2x + x^{2}$
+\item $f(x) = 2x^{2} + x + 4$
+\end{itemize}
+
+O ambiente matemático do LaTeX também é útil para que possamos escrever reações químicas.\\
+
+Vejamos como exemplo uma reação básica para a fotossíntese:\\
+\begin{center}
+$6 CO_{2} + 6 H_{2}O + calor \rightarrow 6 O_{2} + C_{6}H_{12}O_{6}$
+\end{center}
+
+Para o cálculo de limites:
+
+\begin{equation}
+lim_{x \rightarrow 1}(x^{3} - 3)
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+lim_{x \rightarrow 2}\sqrt{x^{4}-8}
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\lim_{x \rightarrow -3}\left(\frac{x^{2}-9}{x+3}\right)
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\lim_{x \rightarrow \infty}\frac{1}{x}
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\int(e^{-x} + 2^{x})dx 
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\int_{a}^{b}f(x)dx = F(b) - F(a)
+\end{equation}\\
+\vspace{0.5cm}
+Em seguida, temos a equação da Lei da Gravitação Universal de Isaac Newton:
+\begin{equation}
+\vec{F} = -G\frac{m_{1}m_{2}}{r^{2}}\hat{r},\hspace{1cm} G = 6.6 \times 10^{-11}\frac{m^{3}}{Kg^{-1}s^{-2}}
+\end{equation}
+\vspace{0.5cm}
+Aplicamos agora a construção de uma equação em t diferenciada:
+\begin{equation}
+f(t) = \frac{1}{2} + \frac{\cos\frac{\pi}{3}}{2\pi}\sum_{-\infty}^{\infty}\frac{1}{n}e^{Bn2\pi t}
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\frac{a}{b+\frac{b+1}{c+\frac{c+1}{d+\frac{d+1}{e}}}}
+\end{equation}
+\vspace{0.5cm}
+Agora vejamos os limitadores left/right na prática que servem para demarcar uma equação/expressão:
+\begin{itemize}
+\item $\left(\frac{a}{b}\right)$
+\item $\left\lbrace\frac{a}{b}\right\rbrace$
+\item $\left[\frac{a}{b}\right]$
+\end{itemize}
+\vspace{0.5cm}
+Vamos criar agora na prática mais um exemplo de equação:
+\vspace{0.3cm}
+\begin{equation}
+\frac{d}{dt}\left(mr^{2}\frac{d\theta}{dt}\right) = 0
+\end{equation}
+
+\vspace{0.5cm}
+
+\begin{equation}
+\left(
+\begin{array}{lr}
+	a & b \\
+	c & d \\
+\end{array}
+\right)
+\end{equation}
+
+\vspace{0.5cm}
+
+\begin{equation}
+\left(
+\begin{array}{lcr}
+	a & b & c \\
+	d & e & f \\
+	g & h & i \\
+\end{array}
+\right)
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\begin{pmatrix}
+a & b & c \\
+d & e & f \\
+\end{pmatrix}
+\end{equation}
+\vspace{0.5cm}
+\begin{equation}
+\begin{pmatrix}
+a & b & c & d \\
+e & f & g & h \\
+i & j & k & l \\
+m & n & o & p \\
+\end{pmatrix}_{4 \times 4}
+\end{equation}
+
+\vspace{0.5cm}
+
+\begin{equation}
+	\left\lbrace
+	\begin{array}{cc}
+		3x + 2y = 6 \\
+		2x + 3y = 5 \\
+	\end{array}
+	\right.
+\end{equation}
+
+\vspace{0.5cm}
+
+\begin{equation}
+	\left\lbrace
+	\begin{array}{ccc}
+		x + y + z = 6\\
+		x + 2y + 2z = 9\\
+		2x + y + 3z = 11\\
+	\end{array}
+	\right.
+\end{equation}
+
+\vspace{0.5cm}
+
+% Podemos escrever sistemas lineares usando o ambiente 'eqnarray', que representa um ambiente para equações de arrays (não há chaves nesse ambiente)
+
+% sistema linear com duas linhas - usando o ambient eqnarray não precisamos iniciar o begin{equation}
+\begin{eqnarray}
+	3x + 2y = 6 \\
+	2x + 3y = 5 
+\end{eqnarray}
+
+\vspace{0.5cm}
+
+\begin{eqnarray}
+	x + y + z = 6 \\
+	x + 2y + 2z = 9 \\
+	2x + y + 3z = 11
+\end{eqnarray}
+
+\vspace{0.5cm}
+
+\begin{equation}
+f(x) =
+\left\lbrace
+\begin{array}{cc}
+	x - 1,& x = 2\\
+	2x + 3,& x \neq 2\\
+\end{array}
+\right.
+\end{equation}
+
+\vspace{0.5cm}
+
+\begin{equation}
+det(A) =
+\left\vert
+\begin{array}{lr}
+	a & b \\
+	c & d \\
+\end{array}
+\right\vert
+\end{equation}
+
+\vspace{0.5cm}
+
+\begin{equation}
+det(B) =
+\left\vert
+\begin{array}{lcr}
+	a_{11} & b_{12} & c_{13} \\
+	d_{21} & e_{22} & f_{23} \\
+	g_{31} & h_{32} & i_{33} \\
+\end{array}
+\right\vert
+\end{equation}
+
+\vspace{0.5cm}
+
+Temos agora, portanto, uma opção para escrever expressões com sobrescritos e subscritos:\\
+
+% $\stackrel{}{}$
+
+Exemplo: $A + B\, \stackrel{2\,min}{\longrightarrow}\, C + D$
+
 \end{document}
